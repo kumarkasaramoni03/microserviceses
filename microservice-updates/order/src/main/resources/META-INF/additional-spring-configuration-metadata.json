@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "sorver.port",
+    "type": "java.lang.String",
+    "description": "A description for 'sorver.port'"
+  },
+  {
+    "name": "sorver.port",
+    "type": "java.lang.String",
+    "description": "A description for 'sorver.port'"
+  }
+]}
