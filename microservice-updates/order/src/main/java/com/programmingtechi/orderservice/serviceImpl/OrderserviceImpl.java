@@ -27,6 +27,8 @@ private OrderRepository orderRepository;
 		List<OrderLineItem> lineItem=orderRequest.getItemdtos()
 				.stream().map(this::maptoDto).toList();
 		order.setOrderLineItem(lineItem);
+		
+//call inventory service and place order if product is stock		
 		orderRepository.save(order);
 	}
 private OrderLineItem maptoDto(OrderLineItemdto itemdto) {
