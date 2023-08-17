@@ -19,8 +19,8 @@ public class InventoryController {
 	@Autowired
 	private InventoryService inventoryService;
 	
-	@GetMapping("/sku-code")
-	public boolean isInstock(@PathVariable("sku-code") String skucode) {
+	@GetMapping("/skucode/{skucode}")
+	public boolean isInstock(@PathVariable(name="skucode") String skucode) {
 		return inventoryService.isInstock(skucode);
 	}
 
