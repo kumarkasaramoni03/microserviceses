@@ -23,6 +23,7 @@ public class InventoryController {
 	@Autowired
 	private InventoryService inventoryService;
 	
+
 //@PathVariable:http://localhost:8082/api/inventory/skucode/Iphone13,Iphone13red
 //	@GetMapping("/skucode/{skucode}")
 //	public boolean isInstock(@PathVariable(name="skucode") String skucode) {
@@ -32,6 +33,7 @@ public class InventoryController {
 	//@RequestParam: http://localhost:8082/api/inventory?skucode=Iphone13&skucode=Iphone13red
 	@GetMapping("/getall")
 	public List<InventoryResponse> isInstock(@RequestParam List<String> skucode) {
+
 		return inventoryService.isInstock(skucode);
 	}
 

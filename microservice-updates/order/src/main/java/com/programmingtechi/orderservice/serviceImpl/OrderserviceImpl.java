@@ -35,6 +35,7 @@ public class OrderserviceImpl implements Orderservice {
 		List<OrderLineItem> lineItem = orderRequest.getItemdtos().stream().map(this::maptoDto).toList();
 		order.setOrderLineItem(lineItem);
 
+
 		List<String> result = order.getOrderLineItem().stream().map(OrderLineItem::getSkucode).toList();
 		// call inventory service and place order if product is stock
 		InventoryResponse[] inventoryResponseArray = client.build().get()
@@ -47,6 +48,8 @@ public class OrderserviceImpl implements Orderservice {
 		} else {
 			throw new IllegalArgumentException("product is not in stock,please try again later");
 		}
+
+		
 	}
 private OrderLineItem maptoDto(OrderLineItemdto itemdto) {
 	OrderLineItem item=new OrderLineItem();
