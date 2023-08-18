@@ -35,6 +35,8 @@ public class InventoryController {
 	public List<InventoryResponse> isInstock(@RequestParam List<String> skucode) {
 
 		return inventoryService.isInstock(skucode);
+		
+		
 	}
 
 	@PostMapping("/creaated")
