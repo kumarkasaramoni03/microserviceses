@@ -27,8 +27,6 @@ public class OrderController {
 		return "order placed successfully";
 		
 	}
-	
-	
 @GetMapping
 @ResponseStatus(HttpStatus.OK)
 public List<OrderResponse> getallOedrs(){
